@@ -177,8 +177,7 @@ export function useScriptGoogleTagManager<T extends GoogleTagManagerApi>(
 
               if (opts.defaultConsent) {
                 // Set default consent state if provided
-                // ts-disable-next-line
-                gtag('consent', 'default', opts.defaultConsent)
+                gtag('consent', 'default', { ...opts.defaultConsent })
               }
 
               // Push the standard GTM initialization event
